@@ -5,7 +5,7 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - ..:/home/ruser/workspace:cached
+      - ..:/home/ruser:cached
       - ~/.gitconfig:/home/ruser/.gitconfig:ro
       - ~/.ssh:/home/ruser/.ssh:ro
     command: sleep infinity

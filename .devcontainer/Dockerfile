@@ -34,7 +34,7 @@ RUN useradd -m ruser && \
 
 USER ruser
 
-# Add .Rprofile
+Add .Rprofile
 RUN copy .Rprofile /home/ruser/.Rprofile
 
 # Install pak and use it to install other R packages
@@ -45,11 +45,8 @@ RUN R -e "tinytex::install_tinytex(force = TRUE)"
 RUN pip3 install -U radian
 RUN pip3 install -U jupyter
 
-# Create workspace directory and set ownership
-RUN mkdir -p /home/ruser/workspace && chown ruser:ruser /home/ruser/workspace
-
 # Set the working directory
-WORKDIR /home/ruser/workspace
+WORKDIR /home/ruser
 
 # Source the .profile file and start bash
 CMD ["bash", "-c", "source ~/.profile && exec bash"]

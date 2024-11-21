@@ -2,7 +2,7 @@
   "name": "R/ Quarto Development",
   "dockerComposeFile": "docker-compose.yml",
   "service": "r-dev",
-  "workspaceFolder": "/home/ruser/workspace",
+  "workspaceFolder": "/home/ruser",
   "settings": {
     "r.rterm.linux": "/usr/local/bin/radian",
     "r.bracketedPaste": true,
