@@ -1,2 +1,4 @@
 .aider*
 dev-container.code-workspace
+.Rhistory
+.RData
