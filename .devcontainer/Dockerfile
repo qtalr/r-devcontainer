@@ -34,7 +34,7 @@ RUN useradd -m ruser && \
 
 USER ruser
 
-Add .Rprofile
+# Add .Rprofile
 RUN copy .Rprofile /home/ruser/.Rprofile
 
 # Install pak and use it to install other R packages
