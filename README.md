@@ -24,7 +24,8 @@ This repository contains a VSCode devcontainer to set up a development environme
 3. Open the cloned folder in Visual Studio Code.
 4. When prompted, click "Reopen in Container" to start the development environment.
 
-> [!NOTE] The container will take a few minutes to build the first time you open it.
+> [!NOTE]
+> The container will take some time to build the first time you open it.
 
 ## Customization
 

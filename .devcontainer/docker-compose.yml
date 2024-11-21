@@ -6,8 +6,6 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ..:/home/ruser:cached
-      - ~/.gitconfig:/home/ruser/.gitconfig:ro
-      - ~/.ssh:/home/ruser/.ssh:ro
     command: sleep infinity
     environment:
       - DISPLAY=${DISPLAY}
