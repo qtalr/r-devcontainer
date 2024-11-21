@@ -5,10 +5,10 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - ..:/workspace:cached
+      - ..:/home/ruser/workspace:cached
       - ~/.gitconfig:/home/ruser/.gitconfig:ro
     command: sleep infinity
     environment:
       - DISPLAY=${DISPLAY}
     user: ruser
-    working_dir: /workspace
+    working_dir: /home/ruser/workspace
