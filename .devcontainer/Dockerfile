@@ -27,8 +27,8 @@ RUN R -e "install.packages('pak', repos = 'https://cran.rstudio.com/')" && \
 RUN echo "options(repos = c(CRAN = 'https://cran.rstudio.com/'))" > ~/.Rprofile
 
 # Add a non-root user
-RUN useradd -m myuser
-USER myuser
+RUN useradd -m ruser
+USER ruser
 
 # Set the working directory
 WORKDIR /workspace
