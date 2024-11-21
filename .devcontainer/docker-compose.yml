@@ -1,4 +1,4 @@
-version: '3'
+version: '3.8'
 services:
   r-dev:
     build:
@@ -6,4 +6,9 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ..:/workspace:cached
+      - ~/.gitconfig:/home/myuser/.gitconfig:ro
     command: sleep infinity
+    environment:
+      - DISPLAY=${DISPLAY}
+    user: myuser
+    working_dir: /workspace
