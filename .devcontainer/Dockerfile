@@ -18,7 +18,7 @@ RUN /rocker_scripts/install_quarto.sh
 RUN /rocker_scripts/install_pandoc.sh
 
 # Install R packages
-RUN R -e "install.packages(c('rmarkdown', 'knitr', 'tidyverse', 'devtools'), repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages(c('rmarkdown', 'pak', 'languageserver', 'knitr', 'devtools', 'httpgd'), repos='http://cran.rstudio.com/')"
 
 # Set the working directory
 WORKDIR /workspace
