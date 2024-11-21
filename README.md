@@ -5,8 +5,8 @@ This repository provides a development container setup for R projects using Visu
 ## Features
 
 - R 4.3.1
-- Common R packages: rmarkdown, languageserver, knitr, devtools, httpgd
-- Quarto 1.3.450 and Pandoc 3.1.1
+- Common R packages: devtools, httpgd, knitr, languageserver, renv, rmarkdown
+- Quarto 1.5.57 and Pandoc 3.1.11
 - Git configuration support
 
 ## Prerequisites
