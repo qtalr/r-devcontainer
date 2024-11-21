@@ -6,9 +6,9 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ..:/workspace:cached
-      - ~/.gitconfig:/home/myuser/.gitconfig:ro
+      - ~/.gitconfig:/home/ruser/.gitconfig:ro
     command: sleep infinity
     environment:
       - DISPLAY=${DISPLAY}
-    user: myuser
+    user: ruser
     working_dir: /workspace

@@ -1,6 +1,6 @@
 FROM rocker/r-ver:4.3.1
 
-# Install system dependencies
+# Install system dependencies including sudo
 RUN apt-get update && apt-get install -y \
     libcurl4-openssl-dev \
     libssl-dev \
@@ -12,6 +12,7 @@ RUN apt-get update && apt-get install -y \
     libpng-dev \
     libtiff5-dev \
     libjpeg-dev \
+    sudo \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
@@ -26,8 +27,12 @@ RUN R -e "install.packages('pak', repos = 'https://cran.rstudio.com/')" && \
 # Add .Rprofile
 RUN echo "options(repos = c(CRAN = 'https://cran.rstudio.com/'))" > ~/.Rprofile
 
-# Add a non-root user
-RUN useradd -m ruser
+# Add a non-root user with sudo privileges
+RUN useradd -m ruser && \
+    usermod -aG sudo ruser && \
+    echo "ruser ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers.d/ruser && \
+    chmod 0440 /etc/sudoers.d/ruser
+
 USER ruser
 
 # Set the working directory
