@@ -4,7 +4,7 @@ This repository provides a development container setup for R projects using Visu
 
 ## Features
 
-- R 4.3.1
+- R 4.4.1
 - Common R packages: devtools, httpgd, knitr, languageserver, renv, rmarkdown
 - Quarto 1.5.57 and Pandoc 3.1.11
 - Git configuration support
@@ -16,10 +16,10 @@ This repository provides a development container setup for R projects using Visu
 
 ## Usage
 
-1. Click the "Use this template" button on GitHub to create a new repository from this template.
-2. Clone your new repository locally.
-3. Open the folder in Visual Studio Code.
-4. When prompted, click "Reopen in Container".
+1. Clone this repository or use it as a reference for your own project.
+2. Ensure you have Docker and Visual Studio Code with the Remote - Containers extension installed.
+3. Open the cloned folder in Visual Studio Code.
+4. When prompted, click "Reopen in Container" to start the development environment.
 
 ## Customization
 
