@@ -11,7 +11,8 @@
     "extensions": [
         "REditorSupport.r",
         "quarto.quarto",
-        "ms-azuretools.vscode-docker"
+        "ms-azuretools.vscode-docker",
+        "yzhang.markdown-all-in-one"
     ],
     "forwardPorts": [8787],
     "postCreateCommand": "echo 'Development container is ready!'"
