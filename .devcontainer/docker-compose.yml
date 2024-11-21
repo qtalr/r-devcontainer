@@ -1,4 +1,4 @@
-version: '3.8'
+version: '3.9'
 services:
   r-dev:
     build:
@@ -7,6 +7,7 @@ services:
     volumes:
       - ..:/home/ruser/workspace:cached
       - ~/.gitconfig:/home/ruser/.gitconfig:ro
+      - ~/.ssh:/home/ruser/.ssh:ro
     command: sleep infinity
     environment:
       - DISPLAY=${DISPLAY}

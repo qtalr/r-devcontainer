@@ -1,19 +1,25 @@
 {
-    "name": "R Quarto Development",
-    "dockerComposeFile": "docker-compose.yml",
-    "service": "r-dev",
-    "workspaceFolder": "/workspace",
-    "settings": {
-        "r.rterm.linux": "/usr/local/bin/R",
-        "r.bracketedPaste": true,
-        "r.plot.useHttpgd": true
-    },
-    "extensions": [
-        "REditorSupport.r",
-        "quarto.quarto",
-        "ms-azuretools.vscode-docker",
-        "yzhang.markdown-all-in-one"
-    ],
-    "forwardPorts": [8787],
-    "postCreateCommand": "echo 'Development container is ready!'"
+  "name": "R/ Quarto Development",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "r-dev",
+  "workspaceFolder": "/home/ruser/workspace",
+  "settings": {
+    "r.rterm.linux": "/usr/local/bin/radian",
+    "r.bracketedPaste": true,
+    "r.plot.useHttpgd": true,
+    "r.rterm.option": [
+      "--no-save",
+      "--no-restore",
+      "--r-binary=/usr/local/bin/R"
+    ]
+  },
+  "extensions": [
+    "REditorSupport.r",
+    "quarto.quarto",
+    "ms-azuretools.vscode-docker",
+    "yzhang.markdown-all-in-one",
+    "ms-python.python"
+  ],
+  "forwardPorts": [8787],
+  "postCreateCommand": "echo 'Development container is ready!'"
 }
