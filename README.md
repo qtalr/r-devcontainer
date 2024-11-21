@@ -5,9 +5,11 @@ This repository provides a development container setup for R projects using Visu
 ## Features
 
 - R 4.4.1
-- Common R packages: devtools, httpgd, knitr, languageserver, renv, rmarkdown
-- Quarto 1.5.57 and Pandoc 3.1.11
+- Common R packages: devtools, httpgd, knitr, languageserver, renv, rmarkdown, tinytex
+- Quarto 1.3.450 and Pandoc 3.1.1
 - Git configuration support
+- Radian and Jupyter for enhanced R programming experience
+- TinyTeX for LaTeX support
 
 ## Prerequisites
 
@@ -26,6 +28,7 @@ This repository provides a development container setup for R projects using Visu
 - Modify the `.devcontainer/Dockerfile` to add or remove system dependencies or R packages.
 - Adjust the `.devcontainer/docker-compose.yml` file to change container settings.
 - Edit the `.devcontainer/devcontainer.json` file to modify VS Code settings or extensions.
+- The container includes a non-root user 'ruser' with sudo privileges for better security.
 
 ## Contributing
 
