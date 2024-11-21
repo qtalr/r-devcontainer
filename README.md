@@ -1,20 +1,21 @@
-# R Development Container Template
+# r-devcontainer
 
-This repository provides a development container setup for R projects using Visual Studio Code.
+This repository contains a VSCode devcontainer to set up a development environment for R programming. This environment was developed to be used with the [Introduction to Quantitative Text Analysis for Linguistics](https://qtalr.com) textbook.
 
 ## Features
 
-- R 4.4.1
-- Common R packages: devtools, httpgd, knitr, languageserver, renv, rmarkdown, tinytex
+- R 4.4.1 based on the Rocker Project's image
 - Quarto 1.3.450 and Pandoc 3.1.1
 - Git configuration support
 - Radian and Jupyter for enhanced R programming experience
 - TinyTeX for LaTeX support
+- Common R packages: devtools, httpgd, knitr, languageserver, renv, rmarkdown, tinytex
 
 ## Prerequisites
 
 - Docker
-- Visual Studio Code with Remote - Containers extension
+- Visual Studio Code
+  - with Remote - Containers extension installed
 
 ## Usage
 
@@ -22,6 +23,8 @@ This repository provides a development container setup for R projects using Visu
 2. Ensure you have Docker and Visual Studio Code with the Remote - Containers extension installed.
 3. Open the cloned folder in Visual Studio Code.
 4. When prompted, click "Reopen in Container" to start the development environment.
+
+> [!NOTE] The container will take a few minutes to build the first time you open it.
 
 ## Customization
 
